@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 引入react.js 核心库文件 -->
+    <script src="./js/react.js"></script>
+    <!-- 引入react-dom.js 操作dom的核心库文件 -->
+    <script src="./js/react-dom.js"></script>
+    <!-- 引入babel.js 文件, -->
+    <script src="./js/babel.js"></script>
+</head>
+
+<body>
+    <div id="root">
+
+    </div>
+</body>
+
+</html>
+<script type="text/babel">
+    // 使用jsx 来渲染页面
+    // jsx 是一种js 的拓展语言, 允许在js中编写html
+    // 在页面中引入babel.js 的作用:``
+    // 由于浏览器只能识别 html ,css js, babel 可以将jsx语法编译成js 语法, 这样浏览器就可以识别加载了
+
+
+    // jsx语法: 
+    // 使用变量:
+    // 使用js 中其他数据数据类型
+
+    const rootDom = document.querySelector('#root');
+    const root = ReactDOM.createRoot(rootDom);
+    const username = '施和斌';
+    const age = 20;
+    const userinfo = {
+        name: '李玟',
+        age: 45
+    };
+    const nameArr = ['吴亦凡', '李易峰', '罗志祥', '李云迪'];
+    const codestr = 'abcdefg'
+    const style = {
+        background: 'red',
+        fontSize: '30px'
+    }
+    const linkstr = '<a href="https://www.baidu.com">百度一下,你就知道</a>'
+    root.render(
+        <div id='100' abc='99'>
+            <p className="p1">我是一个p元素</p>
+            <p>username:{username}</p>
+            <p>age:{age}</p>
+            <p>{age >= 18 ? '成年' : "未成年"}</p>
+            <p>null:{null}</p>
+            <p>undefined:{undefined}</p>
+            <p>{userinfo.name}--{userinfo.age}</p>
+            {/*要注释的代码*/}
+            <p>{nameArr}</p>
+            <ul>
+                {
+                    nameArr.map((item, index) => <li key={index}>{item}</li>)
+                }
+            </ul>
+            <p>code:{codestr.toUpperCase()}</p>
+            {/*动态样式*/}
+            <p style={style}>动态样式</p>
+            {/*渲染数据中含有标签的结构数据*/}
+            <p dangerouslySetInnerHTML={{ __html: linkstr }}></p>
+
+
+        </div>
+    )
+</script>

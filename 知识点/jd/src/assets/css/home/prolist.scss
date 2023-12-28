@@ -1,0 +1,25 @@
+// 产品列表组件的样式
+.prolistbox {
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+        width: 50%;
+        padding: 5px;
+        box-sizing: border-box;
+        list-style: none;
+
+        .adm-ellipsis {
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        p {
+            color: red;
+        }
+    }
+}

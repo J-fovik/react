@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 引入react.js 核心库文件 -->
+    <script src="./js/react.js"></script>
+    <!-- 引入react-dom.js 操作dom的核心库文件 -->
+    <script src="./js/react-dom.js"></script>
+    <!-- 引入babel.js 文件, -->
+    <script src="./js/babel.js"></script>
+</head>
+
+<body>
+    <div id="root">
+
+    </div>
+</body>
+
+</html>
+<script type="text/babel">
+    // 使用jsx 来渲染页面
+    // jsx 是一种js 的拓展语言, 允许在js中编写html
+    // 在页面中引入babel.js 的作用:``
+    // 由于浏览器只能识别 html ,css js, babel 可以将jsx语法编译成js 语法, 这样浏览器就可以识别加载了
+
+    const rootDom = document.querySelector('#root');
+    const root = ReactDOM.createRoot(rootDom);
+    root.render(
+        <div id='100' abc='99'>
+            <p className="p1">我是一个p元素</p>
+        </div>
+    )
+</script>

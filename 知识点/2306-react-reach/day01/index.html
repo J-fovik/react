@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 引入react.js 核心库文件 -->
+    <script src="./js/react.js"></script>
+    <!-- 引入react-dom.js 操作dom的核心库文件 -->
+    <script src="./js/react-dom.js"></script>
+
+</head>
+
+<body>
+    <!-- react项目的根节点,类似与vue 中的app节点 -->
+    <div id="root">
+
+    </div>
+</body>
+
+</html>
+<script>
+    // react.js 提供的一个对象 React
+    // console.log('React', React);
+    // react-dom.js 提供了一个对象 ReactDOM
+    // console.log('ReactDOM', ReactDOM)
+
+    // 01: 获取页面中的根节点 id='#root';
+    const rootDom = document.querySelector('#root');
+    // 02: 创建一个react 根实例, 相当于vue 中的 const vm = creaetApp().mount('#app').use(App); const vm = new Vue()
+    // 将dom 根节点挂载到 根实例root 上;
+    const root = ReactDOM.createRoot(rootDom);
+    // 03: 渲染react组件
+    // root.render(e(LikeButton));
+    // React.createElement('节点的类型','属性对象','子节点')
+    // root.render(React.createElement('div', { 'id': 100, abc: '99' }, '我是div元素'))
+
+    // 问题? 要在div中创建子节点,需要React.createElement()
+    root.render(React.createElement(
+        'div',
+        { 'id': 100, abc: '99' },
+        React.createElement('p', { className: "p1" }, '我是一个p元素')
+    ))
+
+
+
+</script>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    // 创建一个工程化项目的方式: 
+    // 第一种方式:
+    // 步骤1: 安装脚手架  npm i create-react-app -g
+    // create-react-app -v
+    // 步骤2: 使用脚手架创建项目 create-react-app 项目名称   // 注意项目名称不要起关键字
+
+    // 第二种方式:(推荐)
+    // 也下载了脚手架 create-react-app 只不过没有下载电脑硬盘中, 装在了内存中,省空间
+    // npx create-react-app 项目名称
+
+    //工程化目录结构介绍
+    // node_modules: 项目中需要的所有的依赖包 例如 : react.js react-dom.js
+    // public: 项目的静态资源目录
+    // robots.txt : 一个定义搜索引擎搜索规则的文件 (该规则是一个君子协定)
+    // 一般用来做搜索引擎优化的. SEO
+        // User-agent: * 表示搜索引擎   *表示所有的搜索引擎
+        // Disallow    不允许搜索引擎抓取网站内容, 值为当前项目的页面路径
+
+    //src 开发者主要操作的目录
+        // App.css
+        // App.js 为项目的根组件 相当于vue 项目中 App.vue
+             // 在react中组件分为两种, 类组件和函数组件,一般为了和js 做区分, 所以将组件后缀使用jsx
+        // index.css  全局的样式文件
+        // index.js 整个项目的入口文件
+        // .gitignore git 提交的时候设置忽略的文件
+        // package.json
+            // dependencies 记录了生产(上线时候的)依赖的包
+                    // npm i 包名 或者 npm i 包名 --save 或者 npm i 包名 -S
+                    // 执行项目上线打包的时候 npm run build  上线需要, 打包打包到上线静态资源韩中去
+            // devDependencies 记录开发时候依赖包
+                    // npm i 包名 --save-dev  或者 npm i 包名 -D
+                    // 执行项目打包的时候, 不会打包到项目上线的包中去, 只在开发环境下起作用
+
+        // package.lock.json 锁  将项目中所有的依赖包对应的版本锁定 
+
+
+</script>

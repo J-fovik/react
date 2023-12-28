@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkreact_mobile_2306=self.webpackChunkreact_mobile_2306||[]).push([[508],{508:function(e,n,t){t.r(n),t.d(n,{default:function(){return u}});t(2791);var r=t(184);function u(){return(0,r.jsx)("div",{children:"Notfind"})}}}]);
+//# sourceMappingURL=508.caea56d9.chunk.js.map
